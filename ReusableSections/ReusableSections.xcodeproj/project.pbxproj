@@ -8,15 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		8E65EBEA2966FC4A007C1C8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65EBE92966FC4A007C1C8E /* AppDelegate.swift */; };
-		8E65EBEE2966FC4A007C1C8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65EBED2966FC4A007C1C8E /* ViewController.swift */; };
+		8E65EBEE2966FC4A007C1C8E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65EBED2966FC4A007C1C8E /* MainViewController.swift */; };
 		8E65EBF32966FC4C007C1C8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E65EBF22966FC4C007C1C8E /* Assets.xcassets */; };
 		8E65EBF62966FC4C007C1C8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E65EBF42966FC4C007C1C8E /* LaunchScreen.storyboard */; };
+		8E65EC012970842B007C1C8E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8E65EC002970842B007C1C8E /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8E65EBE62966FC4A007C1C8E /* ReusableSections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReusableSections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E65EBE92966FC4A007C1C8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8E65EBED2966FC4A007C1C8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8E65EBED2966FC4A007C1C8E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8E65EBF22966FC4C007C1C8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E65EBF52966FC4C007C1C8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E65EBF72966FC4C007C1C8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E65EC012970842B007C1C8E /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,13 +54,61 @@
 		8E65EBE82966FC4A007C1C8E /* ReusableSections */ = {
 			isa = PBXGroup;
 			children = (
-				8E65EBE92966FC4A007C1C8E /* AppDelegate.swift */,
-				8E65EBED2966FC4A007C1C8E /* ViewController.swift */,
-				8E65EBF22966FC4C007C1C8E /* Assets.xcassets */,
-				8E65EBF42966FC4C007C1C8E /* LaunchScreen.storyboard */,
-				8E65EBF72966FC4C007C1C8E /* Info.plist */,
+				8E65EC03297085E3007C1C8E /* ApplicationLayer */,
+				8E65EC07297086D0007C1C8E /* CoreLayer */,
+				8E65EC0429708658007C1C8E /* Flows */,
 			);
 			path = ReusableSections;
+			sourceTree = "<group>";
+		};
+		8E65EC02297085CB007C1C8E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8E65EBF22966FC4C007C1C8E /* Assets.xcassets */,
+				8E65EBF72966FC4C007C1C8E /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8E65EC03297085E3007C1C8E /* ApplicationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				8E65EBE92966FC4A007C1C8E /* AppDelegate.swift */,
+				8E65EBF42966FC4C007C1C8E /* LaunchScreen.storyboard */,
+			);
+			path = ApplicationLayer;
+			sourceTree = "<group>";
+		};
+		8E65EC0429708658007C1C8E /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				8E65EC0529708668007C1C8E /* Main */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		8E65EC0529708668007C1C8E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8E65EC062970866F007C1C8E /* ViewController */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8E65EC062970866F007C1C8E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8E65EBED2966FC4A007C1C8E /* MainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8E65EC07297086D0007C1C8E /* CoreLayer */ = {
+			isa = PBXGroup;
+			children = (
+				8E65EC02297085CB007C1C8E /* Resources */,
+			);
+			path = CoreLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +127,9 @@
 			dependencies = (
 			);
 			name = ReusableSections;
+			packageProductDependencies = (
+				8E65EC002970842B007C1C8E /* SnapKit */,
+			);
 			productName = ReusableSections;
 			productReference = 8E65EBE62966FC4A007C1C8E /* ReusableSections.app */;
 			productType = "com.apple.product-type.application";
@@ -105,6 +158,9 @@
 				Base,
 			);
 			mainGroup = 8E65EBDD2966FC4A007C1C8E;
+			packageReferences = (
+				8E65EBFF2970842B007C1C8E /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 8E65EBE72966FC4A007C1C8E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -131,7 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E65EBEE2966FC4A007C1C8E /* ViewController.swift in Sources */,
+				8E65EBEE2966FC4A007C1C8E /* MainViewController.swift in Sources */,
 				8E65EBEA2966FC4A007C1C8E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,7 +329,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U3YA646BAR;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ReusableSections/Info.plist;
+				INFOPLIST_FILE = ReusableSections/CoreLayer/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -301,7 +357,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U3YA646BAR;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ReusableSections/Info.plist;
+				INFOPLIST_FILE = ReusableSections/CoreLayer/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -342,6 +398,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8E65EBFF2970842B007C1C8E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8E65EC002970842B007C1C8E /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E65EBFF2970842B007C1C8E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8E65EBDE2966FC4A007C1C8E /* Project object */;
 }
