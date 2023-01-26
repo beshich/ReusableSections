@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E6194082983102E00D91155 /* NSObject + Extenions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6194072983102D00D91155 /* NSObject + Extenions.swift */; };
+		8E61940B2983105A00D91155 /* InlineConfigureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E61940A2983105A00D91155 /* InlineConfigureProtocol.swift */; };
 		8E65EBEA2966FC4A007C1C8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65EBE92966FC4A007C1C8E /* AppDelegate.swift */; };
 		8E65EBEE2966FC4A007C1C8E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65EBED2966FC4A007C1C8E /* MainViewController.swift */; };
 		8E65EBF32966FC4C007C1C8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E65EBF22966FC4C007C1C8E /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E6194072983102D00D91155 /* NSObject + Extenions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject + Extenions.swift"; sourceTree = "<group>"; };
+		8E61940A2983105A00D91155 /* InlineConfigureProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineConfigureProtocol.swift; sourceTree = "<group>"; };
 		8E65EBE62966FC4A007C1C8E /* ReusableSections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReusableSections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E65EBE92966FC4A007C1C8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E65EBED2966FC4A007C1C8E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +39,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E61940529830FE600D91155 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8E6194072983102D00D91155 /* NSObject + Extenions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8E6194092983104200D91155 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8E61940A2983105A00D91155 /* InlineConfigureProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		8E65EBDD2966FC4A007C1C8E = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +126,8 @@
 		8E65EC07297086D0007C1C8E /* CoreLayer */ = {
 			isa = PBXGroup;
 			children = (
+				8E6194092983104200D91155 /* Protocols */,
+				8E61940529830FE600D91155 /* Extensions */,
 				8E65EC02297085CB007C1C8E /* Resources */,
 			);
 			path = CoreLayer;
@@ -188,7 +210,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E65EBEE2966FC4A007C1C8E /* MainViewController.swift in Sources */,
+				8E6194082983102E00D91155 /* NSObject + Extenions.swift in Sources */,
 				8E65EBEA2966FC4A007C1C8E /* AppDelegate.swift in Sources */,
+				8E61940B2983105A00D91155 /* InlineConfigureProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
