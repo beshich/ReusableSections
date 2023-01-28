@@ -10,6 +10,7 @@
 		8E6194082983102E00D91155 /* NSObject + Extenions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6194072983102D00D91155 /* NSObject + Extenions.swift */; };
 		8E61940B2983105A00D91155 /* InlineConfigureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E61940A2983105A00D91155 /* InlineConfigureProtocol.swift */; };
 		8E61940E2983116900D91155 /* Callback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E61940D2983116900D91155 /* Callback.swift */; };
+		8E61941129853B1000D91155 /* TableViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E61941029853B1000D91155 /* TableViewProtocols.swift */; };
 		8E65EBEA2966FC4A007C1C8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65EBE92966FC4A007C1C8E /* AppDelegate.swift */; };
 		8E65EBEE2966FC4A007C1C8E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65EBED2966FC4A007C1C8E /* MainViewController.swift */; };
 		8E65EBF32966FC4C007C1C8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E65EBF22966FC4C007C1C8E /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 		8E6194072983102D00D91155 /* NSObject + Extenions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject + Extenions.swift"; sourceTree = "<group>"; };
 		8E61940A2983105A00D91155 /* InlineConfigureProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineConfigureProtocol.swift; sourceTree = "<group>"; };
 		8E61940D2983116900D91155 /* Callback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callback.swift; sourceTree = "<group>"; };
+		8E61941029853B1000D91155 /* TableViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewProtocols.swift; sourceTree = "<group>"; };
 		8E65EBE62966FC4A007C1C8E /* ReusableSections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReusableSections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E65EBE92966FC4A007C1C8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E65EBED2966FC4A007C1C8E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,14 @@
 				8E61940D2983116900D91155 /* Callback.swift */,
 			);
 			path = Callback;
+			sourceTree = "<group>";
+		};
+		8E61940F29853AE700D91155 /* TypealiasProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				8E61941029853B1000D91155 /* TableViewProtocols.swift */,
+			);
+			path = TypealiasProtocols;
 			sourceTree = "<group>";
 		};
 		8E65EBDD2966FC4A007C1C8E = {
@@ -136,6 +146,7 @@
 		8E65EC07297086D0007C1C8E /* CoreLayer */ = {
 			isa = PBXGroup;
 			children = (
+				8E61940F29853AE700D91155 /* TypealiasProtocols */,
 				8E61940C2983114C00D91155 /* Callback */,
 				8E6194092983104200D91155 /* Protocols */,
 				8E61940529830FE600D91155 /* Extensions */,
@@ -223,6 +234,7 @@
 				8E61940E2983116900D91155 /* Callback.swift in Sources */,
 				8E65EBEE2966FC4A007C1C8E /* MainViewController.swift in Sources */,
 				8E6194082983102E00D91155 /* NSObject + Extenions.swift in Sources */,
+				8E61941129853B1000D91155 /* TableViewProtocols.swift in Sources */,
 				8E65EBEA2966FC4A007C1C8E /* AppDelegate.swift in Sources */,
 				8E61940B2983105A00D91155 /* InlineConfigureProtocol.swift in Sources */,
 			);
