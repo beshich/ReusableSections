@@ -11,6 +11,9 @@
 		8E61940B2983105A00D91155 /* InlineConfigureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E61940A2983105A00D91155 /* InlineConfigureProtocol.swift */; };
 		8E61940E2983116900D91155 /* Callback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E61940D2983116900D91155 /* Callback.swift */; };
 		8E61941129853B1000D91155 /* TableViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E61941029853B1000D91155 /* TableViewProtocols.swift */; };
+		8E61941429867AD700D91155 /* MainConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E61941329867AD700D91155 /* MainConfigurator.swift */; };
+		8E61941929867BA800D91155 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E61941829867BA800D91155 /* MainViewModel.swift */; };
+		8E61941C29867C2A00D91155 /* IdentificalCellProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E61941B29867C2A00D91155 /* IdentificalCellProtocols.swift */; };
 		8E65EBEA2966FC4A007C1C8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65EBE92966FC4A007C1C8E /* AppDelegate.swift */; };
 		8E65EBEE2966FC4A007C1C8E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65EBED2966FC4A007C1C8E /* MainViewController.swift */; };
 		8E65EBF32966FC4C007C1C8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E65EBF22966FC4C007C1C8E /* Assets.xcassets */; };
@@ -23,6 +26,9 @@
 		8E61940A2983105A00D91155 /* InlineConfigureProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineConfigureProtocol.swift; sourceTree = "<group>"; };
 		8E61940D2983116900D91155 /* Callback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callback.swift; sourceTree = "<group>"; };
 		8E61941029853B1000D91155 /* TableViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewProtocols.swift; sourceTree = "<group>"; };
+		8E61941329867AD700D91155 /* MainConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConfigurator.swift; sourceTree = "<group>"; };
+		8E61941829867BA800D91155 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		8E61941B29867C2A00D91155 /* IdentificalCellProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentificalCellProtocols.swift; sourceTree = "<group>"; };
 		8E65EBE62966FC4A007C1C8E /* ReusableSections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReusableSections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E65EBE92966FC4A007C1C8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E65EBED2966FC4A007C1C8E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +60,9 @@
 		8E6194092983104200D91155 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				8E61940A2983105A00D91155 /* InlineConfigureProtocol.swift */,
+				8E61941D29867C4000D91155 /* IdentificalCellProtocol */,
+				8E61941A29867C1400D91155 /* InlineProtocols */,
+				8E61940F29853AE700D91155 /* TypealiasProtocols */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -73,6 +81,54 @@
 				8E61941029853B1000D91155 /* TableViewProtocols.swift */,
 			);
 			path = TypealiasProtocols;
+			sourceTree = "<group>";
+		};
+		8E61941229867AB400D91155 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				8E61941329867AD700D91155 /* MainConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		8E61941529867B5E00D91155 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E61941729867B9200D91155 /* Cell */,
+				8E65EC062970866F007C1C8E /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E61941629867B8200D91155 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8E61941829867BA800D91155 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8E61941729867B9200D91155 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8E61941A29867C1400D91155 /* InlineProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				8E61940A2983105A00D91155 /* InlineConfigureProtocol.swift */,
+			);
+			path = InlineProtocols;
+			sourceTree = "<group>";
+		};
+		8E61941D29867C4000D91155 /* IdentificalCellProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				8E61941B29867C2A00D91155 /* IdentificalCellProtocols.swift */,
+			);
+			path = IdentificalCellProtocol;
 			sourceTree = "<group>";
 		};
 		8E65EBDD2966FC4A007C1C8E = {
@@ -130,7 +186,9 @@
 		8E65EC0529708668007C1C8E /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				8E65EC062970866F007C1C8E /* ViewController */,
+				8E61941629867B8200D91155 /* ViewModel */,
+				8E61941529867B5E00D91155 /* View */,
+				8E61941229867AB400D91155 /* Configurator */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -146,7 +204,6 @@
 		8E65EC07297086D0007C1C8E /* CoreLayer */ = {
 			isa = PBXGroup;
 			children = (
-				8E61940F29853AE700D91155 /* TypealiasProtocols */,
 				8E61940C2983114C00D91155 /* Callback */,
 				8E6194092983104200D91155 /* Protocols */,
 				8E61940529830FE600D91155 /* Extensions */,
@@ -235,8 +292,11 @@
 				8E65EBEE2966FC4A007C1C8E /* MainViewController.swift in Sources */,
 				8E6194082983102E00D91155 /* NSObject + Extenions.swift in Sources */,
 				8E61941129853B1000D91155 /* TableViewProtocols.swift in Sources */,
+				8E61941429867AD700D91155 /* MainConfigurator.swift in Sources */,
 				8E65EBEA2966FC4A007C1C8E /* AppDelegate.swift in Sources */,
 				8E61940B2983105A00D91155 /* InlineConfigureProtocol.swift in Sources */,
+				8E61941929867BA800D91155 /* MainViewModel.swift in Sources */,
+				8E61941C29867C2A00D91155 /* IdentificalCellProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
