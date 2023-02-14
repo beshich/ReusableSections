@@ -10,8 +10,7 @@ import UIKit
 final class MainConfigurator {
     
     static func createPage() -> MainViewController {
-        let viewController = MainViewController()
-        viewController.viewModel = MainViewModel()
+        let viewController = MainViewController(viewModel: MainViewModel())
         
         return viewController
     }

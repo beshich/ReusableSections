@@ -16,7 +16,7 @@ final class MainViewController: UIViewController {
     
     // MARK: - Properties:
     
-    var viewModel: MainViewModel?
+    var viewModel: MainViewModel
     
     // MARK: UI Elements:
     
@@ -31,6 +31,16 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         
         setupViews()
+    }
+    
+    init(viewModel: MainViewModel) {
+        self.viewModel = viewModel
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - Setup Views:
@@ -60,11 +70,11 @@ final class MainViewController: UIViewController {
         tableView.layer.borderWidth = 1
         tableView.layer.cornerRadius = 12
         
-        viewModel?.loadViews()
+        viewModel.loadViews()
     }
     
     private func bindingViews() {
-        viewModel?.updateSections = { [unowned self] sections in
+        viewModel.updateSections = { [unowned self] sections in
             self.sections = sections
             
             tableView.reloadData()
