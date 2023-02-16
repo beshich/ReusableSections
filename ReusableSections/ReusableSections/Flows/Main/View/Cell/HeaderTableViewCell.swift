@@ -22,6 +22,11 @@ class HeaderTableViewCell: UITableViewCell {
     
     private lazy var titleLabel = UILabel().apply {
         $0.textColor = .black
+        $0.font = .boldSystemFont(ofSize: 16)
+    }
+    
+    private lazy var imageIcon = UIImageView().apply {
+        $0.contentMode = .scaleToFill
     }
     
     // MARK: - Lifecycle:
@@ -39,14 +44,18 @@ class HeaderTableViewCell: UITableViewCell {
     // MARK: - Setup Views:
     
     private func setupViews() {
-        contentView.addSubview(titleLabel)
+        contentView.addSubviews(titleLabel, imageIcon)
         
         setupConstraints()
     }
     
     private func setupConstraints() {
         titleLabel.snp.makeConstraints {
-            $0.top.left.equalToSuperview().inset(8)
+            $0.top.left.bottom.equalToSuperview().inset(8)
+        }
+        
+        imageIcon.snp.makeConstraints {
+            $0.top.right.bottom.equalToSuperview().inset(8)
         }
     }
     
@@ -54,6 +63,7 @@ class HeaderTableViewCell: UITableViewCell {
         guard let model = model as? HeaderTableViewCellModel else { return }
         
         self.titleLabel.text = model.title
+        self.imageIcon.image = UIImage(systemName: model.image)
     }
     
     

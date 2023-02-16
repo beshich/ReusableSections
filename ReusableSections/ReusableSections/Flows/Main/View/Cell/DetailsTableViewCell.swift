@@ -24,6 +24,12 @@ class DetailsTableViewCell: UITableViewCell {
         $0.textColor = .black
     }
     
+    private lazy var personImage = UIImageView().apply {
+        $0.contentMode = .scaleToFill
+        $0.layer.masksToBounds = true
+        $0.layer.cornerRadius = 16
+    }
+    
     // MARK: - Lifecycle:
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -39,14 +45,23 @@ class DetailsTableViewCell: UITableViewCell {
     // MARK: - Setup Views:
     
     private func setupViews() {
-        contentView.addSubview(titleLabel)
+        contentView.addSubviews(titleLabel, personImage)
         
         setupConstraints()
     }
     
     private func setupConstraints() {
-        titleLabel.snp.makeConstraints {
+        personImage.snp.makeConstraints {
             $0.top.left.equalToSuperview().inset(8)
+            $0.left.equalToSuperview().inset(8)
+            $0.bottom.equalToSuperview()
+            $0.height.width.equalTo(60)
+        }
+        
+        titleLabel.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(8)
+            $0.left.equalTo(personImage.snp.right).offset(12)
+            $0.bottom.equalToSuperview()
         }
     }
     
@@ -54,6 +69,7 @@ class DetailsTableViewCell: UITableViewCell {
         guard let model = model as? DetailsTableViewCellModel else { return }
         
         self.titleLabel.text = model.title
+        self.personImage.image = UIImage(named: model.image)
     }
     
     

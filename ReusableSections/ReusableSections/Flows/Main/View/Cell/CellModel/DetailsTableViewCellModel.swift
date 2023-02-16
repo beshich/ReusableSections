@@ -12,10 +12,12 @@ class DetailsTableViewCellModel: IdentificalCellProtocol {
     // MARK: - Properties:
     
     var title: String
+    var image: String
     
     // MARK: - Lifecycle:
     
-    init(title: String) {
+    init(title: String, image: String) {
         self.title = title
+        self.image = image
     }
 }

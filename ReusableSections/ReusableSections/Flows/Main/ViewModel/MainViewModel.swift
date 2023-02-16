@@ -19,8 +19,8 @@ final class MainViewModel {
     
     private func makeSections() -> [IdentificalCellProtocol] {
         return [
-            HeaderTableViewCellModel(title: "Title DA DA DA"),
-            DetailsTableViewCellModel(title: "Description Title NET NET")
+            HeaderTableViewCellModel(title: "Список файлов", image: "folder.badge.gearshape"),
+            DetailsTableViewCellModel(title: "Описание о чём-либо", image: "image")
         ]
     }
     
